@@ -21,6 +21,8 @@ public class Cactus extends Actor
         }
         
         if (isTouching(Hero.class)) {
+            Death dead = new Death();
+            getWorld().addObject(dead, 300, 200);
             getWorld().removeObject(this);
         }
     }
