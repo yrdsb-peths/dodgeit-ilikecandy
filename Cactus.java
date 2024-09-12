@@ -19,6 +19,10 @@ public class Cactus extends Actor
         if (getX() <= 0) {
             resetCactus();
         }
+        
+        if (isTouching(Hero.class)) {
+            getWorld().removeObject(this);
+        }
     }
     
     public void resetCactus() {
