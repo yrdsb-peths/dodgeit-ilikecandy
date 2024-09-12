@@ -14,12 +14,15 @@ public class Cactus extends Actor
      */
     public void act()
     {
+        // move cactus
         move(-3);
         
+        // move cactus back if reached end
         if (getX() <= 0) {
             resetCactus();
         }
         
+        // cactus has touched hero
         if (isTouching(Hero.class)) {
             Death dead = new Death();
             getWorld().addObject(dead, 300, 200);
@@ -27,6 +30,7 @@ public class Cactus extends Actor
         }
     }
     
+    // reset the cactus to starting postion
     public void resetCactus() {
         int num = Greenfoot.getRandomNumber(2);
         if (num == 0) {

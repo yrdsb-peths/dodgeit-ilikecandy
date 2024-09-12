@@ -12,10 +12,12 @@ public class Hero extends Actor
     
     public void act()
     {
+        // switch postion
         if (Greenfoot.mouseClicked(null)) {
             atTop = !atTop;
         }
         
+        // set location of hero
         if (atTop) {
             setLocation(100, 100);
         } else {
